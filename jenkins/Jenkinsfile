@@ -1,0 +1,19 @@
+pipeline {
+  agent any
+  tools {
+    nodejs 'node-12.19.0'
+  }
+  options {
+    timeout(time: 5, unit: 'MINUTES')
+  }
+  stages {
+    stage('Print enviroment') {
+      sh 'ls;date;'
+      sh 'env'
+    }
+    stage('Run tests') {
+      sh 'whoami'
+      sh 'npm install -g stylus'
+    }
+  }
+}
