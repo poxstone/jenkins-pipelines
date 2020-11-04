@@ -8,12 +8,13 @@ pipeline {
   stages {
     stage('file list') {
       steps {
+        sh 'pwd'
         sh 'ls'
       }
     }
     stage('enviroments') {
       steps {
-        sh 'env'
+        sh 'env;echo"fin";'
       }
     }
   }
