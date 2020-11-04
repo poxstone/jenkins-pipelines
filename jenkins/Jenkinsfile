@@ -8,13 +8,12 @@ pipeline {
   stages {
     stage('file list') {
       steps {
-        sh 'pwd'
-        sh 'ls'
+        sh 'pwd;ls;cd jenkins;echo "in jenkins";ls;'
       }
     }
     stage('enviroments') {
       steps {
-        sh 'env;echo"fin";'
+        sh 'whoami;env;echo fin;'
       }
     }
   }
