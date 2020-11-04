@@ -8,12 +8,10 @@ pipeline {
   }
   stages {
     stage('Print enviroment') {
-      sh 'ls;date;'
-      sh 'env'
+      sh 'echo 1;ls;date;env'
     }
     stage('Run tests') {
-      sh 'whoami'
-      sh 'npm install -g stylus'
+      sh 'echo 2;whoami;npm install -g stylus'
     }
   }
 }
