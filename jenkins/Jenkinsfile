@@ -13,7 +13,7 @@ pipeline {
     }
     stage('enviroments') {
       steps {
-        sh 'whoami;env;echo fin;'
+        sh 'whoami;env;ls;echo fin;'
       }
     }
   }
