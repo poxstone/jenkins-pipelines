@@ -1,17 +1,20 @@
 pipeline {
   agent any
-  tools {
-    nodejs 'node-12.19.0'
-  }
+
   options {
-    timeout(time: 5, unit: 'MINUTES')
+    timeout(time: 2, unit: 'MINUTES')
   }
+
   stages {
-    stage('Print enviroment') {
-      sh 'echo 1;ls;date;env'
+    stage('file list') {
+      steps {
+        sh 'ls'
+      }
     }
-    stage('Run tests') {
-      sh 'echo 2;whoami;npm install -g stylus;'
+    stage('enviroments') {
+      steps {
+        sh 'env'
+      }
     }
   }
 }
