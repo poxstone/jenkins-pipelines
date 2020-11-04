@@ -11,7 +11,7 @@ pipeline {
       sh 'echo 1;ls;date;env'
     }
     stage('Run tests') {
-      sh 'echo 2;whoami;npm install -g stylus'
+      sh 'echo 2;whoami;npm install -g stylus;'
     }
   }
 }
